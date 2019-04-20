@@ -1,5 +1,6 @@
 package com.example.uas_progmob;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -47,7 +48,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showSelectedAwatara(Awatara awatara) {
-        Toast.makeText(this, "Kamu memilih " + awatara.getName(), Toast.LENGTH_SHORT).show();
+        Intent moveWithDataIntent = new Intent(MainActivity.this, DetailAwatara.class);
+        moveWithDataIntent.putExtra(DetailAwatara.EXTRA_NAME, awatara.getName());
+        moveWithDataIntent.putExtra(DetailAwatara.EXTRA_REMARK, awatara.getRemarks());
+        moveWithDataIntent.putExtra(DetailAwatara.EXTRA_DESCRIPTION, awatara.getDescription());
+        moveWithDataIntent.putExtra(DetailAwatara.EXTRA_PHOTO, awatara.getPhoto());
+        startActivity(moveWithDataIntent);
+
+//        Toast.makeText(this, "Kamu memilih " + awatara.getName(), Toast.LENGTH_SHORT).show();
     }
 
     private void showRecyclerList() {
