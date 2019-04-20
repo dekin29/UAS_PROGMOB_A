@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">UAS_PROGMOB</string>
+    <string name="app_name">Awatara</string>
+    <string name="listview">List View</string>
+    <string name="gridview">Grid View</string>
+    <string name="cardview">Card View</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
 </resources>
